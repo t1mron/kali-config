@@ -6,7 +6,7 @@ I. Simple server configuration
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install mc mosh build-essential python3.8 fontconfig
+sudo apt install mc mosh ufw build-essential python3.8 fontconfig
 ```
 2. Clone repository 
 ```
