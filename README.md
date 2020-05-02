@@ -27,3 +27,10 @@ export PATH=$PATH:$HOME/dotnet-arm64
 cd ~/webdav 
 dotnet wdmrc.dll -p 8888
 ```
+3. rdp
+```
+apt install xrdp
+systemctl enable xrdp
+systemctl restart xrdp
+```
+
