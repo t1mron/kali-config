@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export DOTNET_ROOT=/root/dotnet-arm64
-export PATH=$PATH:/root/dotnet-arm64
-
+export DOTNET_ROOT=$HOME/dotnet-arm64
+export PATH=$PATH:$HOME/dotnet-arm64
+export GOPATH=\$HOME/gopath
+export PATH=\$GOPATH:\$GOPATH/bin:\$PATH
 # -- user customizations -------------------------------------------------------
