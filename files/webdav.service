@@ -1,0 +1,11 @@
+[Unit]
+Description= WebDav
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/root/dotnet-arm64/dotnet /root/webdav/webdav_mail/wdmrc.dll -p 8888
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
