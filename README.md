@@ -5,7 +5,7 @@
 ```
 apt update
 apt upgrade
-apt install mc mosh ufw build-essential python3.8 fontconfig
+apt install mc mosh ufw build-essential golang python3.8 fontconfig
 apt install software-properties-common
 ```
 2. ufw
