@@ -1,5 +1,5 @@
 [Unit]
-Description= WebDav
+Description= WebDav mail
 After=network.target
 
 [Service]
