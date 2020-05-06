@@ -5,7 +5,7 @@
 ```
 apt update
 apt upgrade
-apt install mc mosh ufw golang 
+apt install mc mosh ufw
 apt install software-properties-common
 ```
 2. ufw
@@ -49,6 +49,10 @@ unzip WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip && rm -rf WebDAVCloudMailRu-1
 cp            /lib/systemd/system/webdav_mail.service
 systemctl start webdav_mail
 systemctl enable webdav_mail
+
+webdav_google:
+pip3 install gdrivefs
+
 
 mount -a
 ```
