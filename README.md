@@ -46,7 +46,9 @@ cd /root/webdav/webdav_mail
 wget https://github.com/yar229/WebDavMailRuCloud/releases/download/1.11.0.20/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip 
 unzip WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip && rm -rf WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip
 
-wget....           /etc/systemd/system/
+cp            /lib/systemd/system/webdav_mail.service
+systemctl start webdav_mail
+systemctl enable webdav_mail
 ```
 3. rdp
 ```
