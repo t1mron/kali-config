@@ -12,7 +12,7 @@ apt install software-properties-common
 ```
 ufw allow ssh
 ufw allow mosh
-ufw allow rdp
+ufw allow 3389
 ufw allow 8888
 ufw enable
 ufw reload
@@ -59,8 +59,8 @@ mount -a
 3. rdp
 ```
 apt install xrdp
+systemctl start xrdp
 systemctl enable xrdp
-systemctl restart xrdp
 ```
 
 
