@@ -17,6 +17,11 @@ ufw allow 8888
 ufw enable
 ufw reload
 ```
+3. Install raspi-config
+```
+git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config
+source raspi-config
+```
 3. webdav
 ```
 davfs2:
