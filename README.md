@@ -27,7 +27,11 @@ source raspi-config
 davfs2:
 apt install davfs2
 usermod -aG davfs2 root
-mkdir /mnt/cloud_mail
+
+mkdir /root/mnt
+mkdir /root/mnt/cloud_mail
+mkdir /root/mnt/cloud_yandex
+mkdir /root/mnt/cloud_google
 
 net core:
 sudo apt-get install apt-transport-https (???)
