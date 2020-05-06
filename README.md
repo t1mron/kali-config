@@ -35,10 +35,15 @@ mkdir /root/mnt/cloud_google
 
 net core:
 mkdir dotnet-arm64
+cd dotnet-arm64
 wget https://download.visualstudio.microsoft.com/download/pr/98a2e556-bedd-46c8-b3fa-96a9f1eb9556/09f60d50e3cbba0aa16d48ceec9dcb0b/dotnet-sdk-3.1.201-linux-arm64.tar.gz /root/dotnet-arm64
 tar zxf dotnet-sdk-3.1.201-linux-arm64.tar.gz && rm -rf dotnet-sdk-3.1.201-linux-arm64.tar.gz
 
-wget https://github.com/yar229/WebDavMailRuCloud/releases/download/1.11.0.20/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip ~/webdav/webdav_mail
+webdav_mail:
+mdkir /root/webdav
+mdkir /root/webdav/webdav_mail
+cd /root/webdav/webdav_mail
+wget https://github.com/yar229/WebDavMailRuCloud/releases/download/1.11.0.20/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip 
 unzip WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip && rm -rf WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip
 
 wget....           /etc/systemd/system/
