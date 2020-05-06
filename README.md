@@ -49,6 +49,8 @@ unzip WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip && rm -rf WebDAVCloudMailRu-1
 cp            /lib/systemd/system/webdav_mail.service
 systemctl start webdav_mail
 systemctl enable webdav_mail
+
+mount -a
 ```
 3. rdp
 ```
