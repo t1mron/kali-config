@@ -8,6 +8,11 @@ apt upgrade
 apt install mc mosh ufw
 apt install software-properties-common
 ```
+1. bios update
+```
+curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update
+rpi-update
+```
 2. ufw
 ```
 ufw allow ssh
