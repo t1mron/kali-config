@@ -45,8 +45,8 @@ wget https://download.visualstudio.microsoft.com/download/pr/98a2e556-bedd-46c8-
 tar zxf dotnet-sdk-3.1.201-linux-arm64.tar.gz && rm -rf dotnet-sdk-3.1.201-linux-arm64.tar.gz
 
 webdav_mail:
-mdkir /root/webdav
-mdkir /root/webdav/webdav_mail
+mkdir /root/webdav
+mkdir /root/webdav/webdav_mail
 cd /root/webdav/webdav_mail
 wget https://github.com/yar229/WebDavMailRuCloud/releases/download/1.11.0.20/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip 
 unzip WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip && rm -rf WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip
