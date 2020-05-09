@@ -5,8 +5,7 @@
 ```
 apt update
 apt upgrade
-apt install mc mosh ufw
-apt install software-properties-common
+apt install mc mosh ufw software-properties-common gparted
 ```
 1. bios update
 ```
