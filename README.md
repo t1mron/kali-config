@@ -5,7 +5,7 @@
 ```
 apt update
 apt upgrade
-apt install mc mosh ufw software-properties-common gparted xrdp
+apt install mc mosh ufw software-properties-common gparted xrdp davfs2
 ```
 2. ufw
 ```
@@ -21,6 +21,11 @@ systemctl enable xrdp
 1. config files
 ```
 git clone https://github.com/t1mron/kali_config.git ~/git/kali_config/
+
+cp ~/git/kali_config/webdav_mail.service /lib/systemd/system/
+cp ~/git/kali_config/{davfs2.conf,secrets} /etc/davfs2/
+cp ~/git/kali_config/fstab /etc/fstab
+cd ~/git/kali_config/bash.sh ~/scripts/
 ```
 1. bios update
 ```
@@ -34,7 +39,6 @@ git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && s
 
 davfs2:
 ```
-apt install davfs2
 usermod -aG davfs2 root
 mkdir ~/mnt
 mkdir ~/mnt/{cloud_mail,cloud_yandex,cloud_google,hdd}
@@ -52,7 +56,7 @@ systemctl enable webdav_mail
 ```
 mount -a
 ```
-cp            /lib/systemd/system/webdav_mail.service
+
 
 
 
