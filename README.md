@@ -41,7 +41,7 @@ mkdir ~/mnt/{cloud_mail,cloud_yandex,cloud_google,hdd}
 ```
 net core:
 ```
-wget -P ~/dotnet-arm64/ https://download.visualstudio.microsoft.com/download/pr/98a2e556-bedd-4 6c8-b3fa-96a9f1eb9556/09f60d50e3cbba0aa16d48ceec9dcb0b/dotnet-sdk-3.1.201-linux-arm64.tar.gz && tar -xzf ~/dotnet-arm64/dotnet-sdk-3.1.201-linux-arm64.tar.gz && rm -rf ~/dotnet-arm64/dotnet-sdk-3.1.201-linux-arm64.tar.gz
+wget -P ~/dotnet-arm64/ https://download.visualstudio.microsoft.com/download/pr/98a2e556-bedd-46c8-b3fa-96a9f1eb9556/09f60d50e3cbba0aa16d48ceec9dcb0b/dotnet-sdk-3.1.201-linux-arm64.tar.gz && tar -xzf ~/dotnet-arm64/dotnet-sdk-3.1.201-linux-arm64.tar.gz && rm -rf ~/dotnet-arm64/dotnet-sdk-3.1.201-linux-arm64.tar.gz
 ```
 webdav_mail:
 ```
