@@ -24,8 +24,7 @@ git clone https://github.com/t1mron/kali_config.git ~/git/kali_config/
 ```
 1. bios update
 ```
-curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update
-rpi-update
+curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update && rpi-update
 ```
 1. Install raspi-config
 ```
