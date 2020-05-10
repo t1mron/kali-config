@@ -31,10 +31,8 @@ davfs2:
 apt install davfs2
 usermod -aG davfs2 root
 
-mkdir /root/mnt
-mkdir /root/mnt/cloud_mail
-mkdir /root/mnt/cloud_yandex
-mkdir /root/mnt/cloud_google
+mkdir ~/mnt
+mkdir ~/mnt/{cloud_mail,cloud_yandex,cloud_google,hdd}
 
 net core:
 mkdir dotnet-arm64
