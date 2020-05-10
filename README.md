@@ -45,7 +45,7 @@ wget -P ~/dotnet-arm64/ https://download.visualstudio.microsoft.com/download/pr/
 ```
 webdav_mail:
 ```
-wget -P ~/webdav/webdav_mail/ https://github.com/yar229/WebDavMailRuCloud/releases/download/1.11.0.20/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip & unzip WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip && rm -rf WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip
+wget -P ~/webdav/webdav_mail/ https://github.com/yar229/WebDavMailRuCloud/releases/download/1.11.0.20/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip && unzip ~/webdav/webdav_mail/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip && rm -rf ~/webdav/webdav_mail/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip
 systemctl start webdav_mail
 systemctl enable webdav_mail
 ```
