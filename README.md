@@ -23,8 +23,7 @@ ufw reload
 ```
 3. Install raspi-config
 ```
-git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config
-source raspi-config
+git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && source ~/git/raspi-config/raspi-config
 ```
 3. webdav
 ```
