@@ -1,16 +1,11 @@
 # kali_confiig
 
 
-1. Install midnight commander, mosh, mosh, golang
+1. Install midnight commander, mosh, mosh, 
 ```
 apt update
 apt upgrade
-apt install mc mosh ufw software-properties-common gparted
-```
-1. bios update
-```
-curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update
-rpi-update
+apt install mc mosh ufw software-properties-common gparted xrdp
 ```
 2. ufw
 ```
@@ -20,45 +15,51 @@ ufw allow 3389
 ufw allow 8888
 ufw enable
 ufw reload
+systemctl start xrdp
+systemctl enable xrdp
 ```
-3. Install raspi-config
+1. config files
+```
+git clone https://github.com/t1mron/kali_config.git ~/git/kali_config/
+```
+1. bios update
+```
+curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update
+rpi-update
+```
+1. Install raspi-config
 ```
 git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && source ~/git/raspi-config/raspi-config
 ```
 3. webdav
-```
+
 davfs2:
+```
 apt install davfs2
 usermod -aG davfs2 root
-
-mkdir ~/{mnt,dotnet-arm64,webdav}
+mkdir ~/mnt
 mkdir ~/mnt/{cloud_mail,cloud_yandex,cloud_google,hdd}
-mkdir ~/mnt/webdav/webdav_mail
-
+```
 net core:
-cd dotnet-arm64
-wget https://download.visualstudio.microsoft.com/download/pr/98a2e556-bedd-46c8-b3fa-96a9f1eb9556/09f60d50e3cbba0aa16d48ceec9dcb0b/dotnet-sdk-3.1.201-linux-arm64.tar.gz /root/dotnet-arm64
-tar zxf dotnet-sdk-3.1.201-linux-arm64.tar.gz && rm -rf dotnet-sdk-3.1.201-linux-arm64.tar.gz
-
+```
+wget -P ~/dotnet-arm64/ https://download.visualstudio.microsoft.com/download/pr/98a2e556-bedd-4
+6c8-b3fa-96a9f1eb9556/09f60d50e3cbba0aa16d48ceec9dcb0b/dotnet-sdk-3.1.201-linux-arm64.tar.gz && tar -xzf ~/dot
+net-arm64/dotnet-sdk-3.1.201-linux-arm64.tar.gz && rm -rf ~/dotnet-arm64/dotnet-sdk-3.1.201-linux-arm64.tar.gz
+```
 webdav_mail:
+```
 wget https://github.com/yar229/WebDavMailRuCloud/releases/download/1.11.0.20/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip 
 unzip WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip && rm -rf WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip
-
-cp            /lib/systemd/system/webdav_mail.service
 systemctl start webdav_mail
 systemctl enable webdav_mail
-
-webdav_google:
-pip3 install gdrivefs
-
-
+```
+```
 mount -a
 ```
-3. rdp
-```
-apt install xrdp
-systemctl start xrdp
-systemctl enable xrdp
-```
+cp            /lib/systemd/system/webdav_mail.service
+
+
+
+
 
 
