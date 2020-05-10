@@ -21,11 +21,10 @@ systemctl enable xrdp
 1. config files
 ```
 git clone https://github.com/t1mron/kali_config.git ~/git/kali_config/
-
-cp ~/git/kali_config/webdav_mail.service /lib/systemd/system/
-cp ~/git/kali_config/{davfs2.conf,secrets} /etc/davfs2/
-cp ~/git/kali_config/fstab /etc/fstab
-cd ~/git/kali_config/bash.sh ~/scripts/
+cp ~/git/kali_config/files/webdav_mail.service /lib/systemd/system/
+cp ~/git/kali_config/files/{davfs2.conf,secrets} /etc/davfs2/
+cp ~/git/kali_config/files/fstab /etc/
+cp ~/git/kali_config/files/bash.sh ~/scripts/
 ```
 1. bios update
 ```
