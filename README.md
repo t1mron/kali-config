@@ -72,8 +72,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 reboot 
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-git clone https://github.com/gpakosz/.tmux.git  ~/git/tmux_config/
-ln -s -f ~/git/tmux_config/.tmux.conf
+git clone https://github.com/gpakosz/.tmux.git  ~/git/tmux-config/
+ln -s -f ~/git/tmux-config/.tmux.conf
 ```
 You need to install custom fonts into your mobile app (for example, blink shell) or into pc (nerd-fonts)<br/>
 2. set conf files
