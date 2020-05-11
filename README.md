@@ -26,10 +26,6 @@ cp ~/git/kali-config/files/{davfs2.conf,secrets} /etc/davfs2/
 cp ~/git/kali-config/files/fstab /etc/
 cp ~/git/kali-config/files/bash.sh ~/scripts/
 ```
-1. bios update
-```
-curl -L --output /usr/bin/rpi-update https://raw.githubusercontent.com/Hexxeh/rpi-update/master/rpi-update && sudo chmod +x /usr/bin/rpi-update && rpi-update
-```
 1. Install raspi-config
 ```
 git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && source ~/git/raspi-config/raspi-config
