@@ -5,7 +5,7 @@ I. Simple server configuration
 1. Install midnight commander, mosh, mosh, 
 ```
 apt update
-apt upgrade
+apt full-upgrade
 apt install mc mosh ufw software-properties-common gparted xrdp davfs2
 ```
 2. ufw
