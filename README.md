@@ -77,9 +77,10 @@ vim: :PlugInstall
 ```
 Profit! Enjoy :)
 
-
-
-
+clone sd card and shrink:
+```
+dd if=/dev/<sdcard> of=~/<path-to-hdd>/kali_backup.img
+```
 
 
 
