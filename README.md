@@ -29,7 +29,7 @@ cp ~/git/kali-config/files/bash.sh ~/scripts/
 ```
 1. Install raspi-config
 ```
-git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && source ~/git/raspi-config/raspi-config
+git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && cd ~/git/raspi-config && chmod +x raspi-config && mv raspi-config /usr/local/bin && raspi-config
 ```
 3. webdav
 
