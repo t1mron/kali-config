@@ -6,22 +6,17 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common gparted davfs2 fail2ban
+apt install mc mosh ufw software-properties-common davfs2 fail2ban
 ```
 2. ufw
 ```
-ufw allow ssh
-ufw allow mosh
-ufw allow 8888
-ufw enable
-ufw reload
+ufw allow 22/tcp, 60000:61000/udp, 8888 && ufw enable && ufw reload
 ```
 3. config files
 ```
 git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/bash.sh && config_pull
 git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && cd ~/git/raspi-config && chmod +x raspi-config && mv raspi-config /usr/local/bin && raspi-config
-systemctl start fail2ban
-systemctl enable fail2ban
+systemctl start fail2ban && systemctl enable fail2ban
 ```
 
 4. webdav
@@ -36,8 +31,7 @@ webdav_mail:
 wget -P ~/dotnet-arm64/ https://download.visualstudio.microsoft.com/download/pr/98a2e556-bedd-46c8-b3fa-96a9f1eb9556/09f60d50e3cbba0aa16d48ceec9dcb0b/dotnet-sdk-3.1.201-linux-arm64.tar.gz&&cd ~/dotnet-arm64/&&tar -xzf dotnet-sdk-3.1.201-linux-arm64.tar.gz&&rm -rf dotnet-sdk-3.1.201-linux-arm64.tar.gz
 
 wget -P ~/webdav/webdav_mail https://github.com/yar229/WebDavMailRuCloud/releases/download/1.11.0.20/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip&&cd ~/webdav/webdav_mail&&unzip WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip&&rm -rf WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip
-systemctl start webdav_mail
-systemctl enable webdav_mail
+systemctl start webdav_mail && systemctl enable webdav_mail
 ```
 ```
 mount -a
@@ -47,8 +41,7 @@ II Terminal customization
 
 1. Install snap, rust, LSD, zsh, vim-plug,tmp, tmux_config, 
 ```
-apt install snapd
-systemctl enable --now snapd apparmor
+apt install snapd && systemctl enable --now snapd apparmor
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 reboot
