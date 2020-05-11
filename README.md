@@ -32,8 +32,7 @@ systemctl enable fail2ban
 davfs2:
 ```
 usermod -aG davfs2 root
-mkdir ~/mnt
-mkdir ~/mnt/{cloud_mail,cloud_yandex,cloud_google,hdd}
+mkdir ~/mnt && mkdir ~/mnt/{cloud_mail,cloud_yandex,cloud_google,hdd}
 ```
 webdav_mail:
 ```
