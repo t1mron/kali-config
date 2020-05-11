@@ -22,10 +22,7 @@ systemctl enable xrdp
 1. config files
 ```
 git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/
-cp ~/git/kali-config/files/webdav_mail.service /lib/systemd/system/
-cp ~/git/kali-config/files/{davfs2.conf,secrets} /etc/davfs2/
-cp ~/git/kali-config/files/fstab /etc/
-cp ~/git/kali-config/files/bash.sh ~/scripts/
+source ~/git/kali-config/bash.sh && config_pull
 ```
 1. Install raspi-config
 ```
