@@ -6,18 +6,15 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common gparted xrdp davfs2 fail2ban
+apt install mc mosh ufw software-properties-common gparted davfs2 fail2ban
 ```
 2. ufw
 ```
 ufw allow ssh
 ufw allow mosh
-ufw allow 3389
 ufw allow 8888
 ufw enable
 ufw reload
-systemctl start xrdp
-systemctl enable xrdp
 ```
 3. config files
 ```
