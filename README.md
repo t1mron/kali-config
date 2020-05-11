@@ -57,12 +57,16 @@ II Terminal customization
 
 1. Install zsh, vim-plug, LSD, tmp, tmux_config, 
 ```
-sudo apt install zsh 
+apt install zsh 
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-sudo snap install lsd
+apt install snapd
+snap install lsd
+systemctl enable --now snapd apparmor
+reboot 
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/gpakosz/.tmux.git  ~/git/tmux_config/
 ln -s -f ~/git/tmux_config/.tmux.conf
