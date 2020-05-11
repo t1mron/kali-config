@@ -6,7 +6,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common davfs2 fail2ban
+apt install mc mosh ufw software-properties-common davfs2 fail2ban libfuse-dev libwxbase3.0-dev
 ```
 2. ufw
 ```
