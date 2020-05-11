@@ -61,6 +61,8 @@ apt install snapd
 systemctl enable --now snapd apparmor
 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+reboot
+cargo install lsd
 
 apt install zsh 
 
