@@ -55,16 +55,18 @@ mount -a
 
 II Terminal customization
 
-1. Install zsh, vim-plug, LSD, tmp, tmux_config, 
+1. Install snap, rust, LSD, zsh, vim-plug,tmp, tmux_config, 
 ```
+apt install snapd
+systemctl enable --now snapd apparmor
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 apt install zsh 
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-apt install snapd
-snap install lsd
-systemctl enable --now snapd apparmor
 reboot 
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
