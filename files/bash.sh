@@ -5,11 +5,15 @@
 # -- functions ----------------------
 function config_pull()
 	{
-	cd ~/git/linux_config && git pull;
-	sudo cp ~/git/linux_config/files/{antigen.zsh,.zshrc,.p10k.zsh,.tmux.conf.local,bash.sh,.vimrc} ~/
-	sudo cp ~/git/linux_config/files/hostname /etc/;
-	sudo cp ~/git/linux_config/files/sshd_config /etc/ssh/;
-	sudo cp ~/git/linux_config/files/jail.local /etc/fail2ban/;	
+	cd ~/git/kali-config/files && git pull;
+	cp webdav_mail.service /lib/systemd/system/
+	cp {davfs2.conf,secrets} /etc/davfs2/
+	cp fstab /etc/
+	cp bash.sh ~/scripts/
+	cp {antigen.zsh,.zshrc,.p10k.zsh,.tmux.conf.local,bash.sh,.vimrc} ~/
+	cp hostname /etc/;
+	cp sshd_config /etc/ssh/;
+	cp jail.local /etc/fail2ban/;	
 	}
 
 # -- aliases ----------------------
