@@ -6,7 +6,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common gparted xrdp davfs2
+apt install mc mosh ufw software-properties-common gparted xrdp davfs2 fail2ban
 ```
 2. ufw
 ```
@@ -19,10 +19,13 @@ ufw reload
 systemctl start xrdp
 systemctl enable xrdp
 ```
+1.
+
 1. config files
 ```
-git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/
-source ~/git/kali-config/bash.sh && config_pull
+git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/bash.sh && config_pull
+systemctl start fail2ban
+systemctl enable fail2ban
 ```
 1. Install raspi-config
 ```
