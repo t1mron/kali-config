@@ -81,6 +81,7 @@ clone sd card and shrink:
 dd if=/dev/<sdcard> of=~/<path-to-hdd>/kali_backup.img
 
 git clone https://github.com/Drewsif/PiShrink.git ~/git/PiShrink/ && cd ~/git/PiShrink/ && chmod +x pishrink.sh && mv pishrink.sh /usr/local/bin
+pishrink.sh /root/mnt/hdd/kali_backup.img
 ```
 
 
