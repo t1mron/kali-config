@@ -1,5 +1,6 @@
 # kali_confiig
 
+I. Simple server configuration 
 
 1. Install midnight commander, mosh, mosh, 
 ```
@@ -51,6 +52,33 @@ systemctl enable webdav_mail
 ```
 mount -a
 ```
+
+II Terminal customization
+
+1. Install zsh, vim-plug, LSD, tmp, tmux_config, 
+```
+sudo apt install zsh 
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+sudo snap install lsd
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/gpakosz/.tmux.git  ~/git/tmux_config/
+ln -s -f ~/git/tmux_config/.tmux.conf
+```
+You need to install custom fonts into your mobile app (for example, blink shell) or into pc (nerd-fonts)<br/>
+2. set conf files
+```
+sudo cp ~/git/linux_config/files/{antigen.zsh,.zshrc,.p10k.zsh,.tmux.conf.local,bash.sh,.vimrc} ~/
+```
+
+3. Update
+```
+tmux
+Press prefix + I (capital i, as in Install) to fetch the plugins
+```
+Profit! Enjoy :)
 
 
 
