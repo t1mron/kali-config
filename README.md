@@ -73,8 +73,10 @@ You need to install custom fonts into your mobile app (for example, blink shell)
 ```
 tmux
 Press prefix + I (capital i, as in Install) to fetch the plugins
+vim: :PlugInstall
 ```
 Profit! Enjoy :)
+
 
 
 
