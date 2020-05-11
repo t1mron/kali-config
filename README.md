@@ -64,8 +64,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-git clone https://github.com/gpakosz/.tmux.git  ~/git/tmux-config/
-ln -s -f ~/git/tmux-config/.tmux.conf
+git clone https://github.com/gpakosz/.tmux.git  ~/git/tmux-config/ && ln -s -f ~/git/tmux-config/.tmux.conf
 ```
 You need to install custom fonts into your mobile app (for example, blink shell) or into pc (nerd-fonts)<br/>
 
@@ -80,6 +79,8 @@ Profit! Enjoy :)
 clone sd card and shrink:
 ```
 dd if=/dev/<sdcard> of=~/<path-to-hdd>/kali_backup.img
+
+git clone https://github.com/Drewsif/PiShrink.git ~/git/PiShrink/ && cd ~/git/PiShrink/ && chmod +x pishrink.sh && mv pishrink.sh /usr/local/bin
 ```
 
 
