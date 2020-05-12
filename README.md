@@ -10,7 +10,7 @@ apt install mc mosh ufw software-properties-common davfs2 fail2ban libfuse-dev l
 ```
 2. ufw
 ```
-ufw allow 22/tcp && ufw allow 8888 && ufw allow 60000:61000/udp && ufw enable && ufw reload
+ufw allow ssh && ufw allow mosh && ufw allow 8888 && ufw enable && ufw reload
 ```
 3. config files
 ```
