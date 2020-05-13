@@ -38,6 +38,15 @@ mount -a
 ```
 5. encrypt disk
 ```
+cryptsetup -v --verify-passphrase luksFormat <your_disk>
+cryptsetup luksOpen <your_disk> backup
+mkfs.ext4 /dev/mapper/backup
+cryptsetup luksClose /dev/mapper/backup
+```
+mount disk
+```
+cryptsetup open <your_disk> backup
+mount /dev/mapper/backup ~/mnt/hdd
 ```
 
 II Terminal customization
