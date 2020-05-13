@@ -6,7 +6,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common davfs2 fail2ban libfuse-dev libwxbase3.0-dev
+apt install mc mosh ufw software-properties-common davfs2 fail2ban libfuse-dev libwxbase3.0-dev cryptsetup
 ```
 2. ufw
 ```
@@ -35,6 +35,9 @@ systemctl start webdav_mail && systemctl enable webdav_mail
 ```
 ```
 mount -a
+```
+5. encrypt disk
+```
 ```
 
 II Terminal customization
