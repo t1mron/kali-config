@@ -6,9 +6,6 @@
 function config_pull()
 	{
 	cd ~/git/kali-config/files && git pull;
-	cp webdav_mail.service /lib/systemd/system/
-	cp {davfs2.conf,secrets} /etc/davfs2/
-	cp fstab /etc/
 	cp bash.sh ~/scripts/
 	cp {antigen.zsh,.zshrc,.p10k.zsh,.tmux.conf.local,bash.sh,.vimrc} ~/
 	cp hostname /etc/;
