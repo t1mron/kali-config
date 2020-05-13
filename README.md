@@ -10,7 +10,7 @@ apt install mc mosh ufw software-properties-common fail2ban cryptsetup
 ```
 2. ufw
 ```
-ufw allow ssh && ufw allow mosh && ufw allow 8888 && ufw enable && ufw reload
+ufw allow ssh && ufw allow mosh && ufw enable && ufw reload
 ```
 3. config files
 ```
