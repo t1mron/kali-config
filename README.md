@@ -6,7 +6,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common davfs2 fail2ban libfuse-dev libwxbase3.0-dev cryptsetup
+apt install mc mosh ufw software-properties-common fail2ban libfuse-dev libwxbase3.0-dev cryptsetup
 ```
 2. ufw
 ```
@@ -19,22 +19,10 @@ git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && c
 systemctl start fail2ban && systemctl enable fail2ban
 ```
 
-4. webdav
+4. rclone
+```
+rclone config
 
-davfs2:
-```
-usermod -aG davfs2 root
-mkdir ~/mnt && mkdir ~/mnt/{cloud_mail,cloud_yandex,cloud_google,hdd}
-```
-webdav_mail:
-```
-wget -P ~/dotnet-arm64/ https://download.visualstudio.microsoft.com/download/pr/98a2e556-bedd-46c8-b3fa-96a9f1eb9556/09f60d50e3cbba0aa16d48ceec9dcb0b/dotnet-sdk-3.1.201-linux-arm64.tar.gz&&cd ~/dotnet-arm64/&&tar -xzf dotnet-sdk-3.1.201-linux-arm64.tar.gz&&rm -rf dotnet-sdk-3.1.201-linux-arm64.tar.gz
-
-wget -P ~/webdav/webdav_mail https://github.com/yar229/WebDavMailRuCloud/releases/download/1.11.0.20/WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip&&cd ~/webdav/webdav_mail&&unzip WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip&&rm -rf WebDAVCloudMailRu-1.11.0.20-dotNetCore30.zip
-systemctl start webdav_mail && systemctl enable webdav_mail
-```
-```
-mount -a
 ```
 5. encrypt disk
 ```
