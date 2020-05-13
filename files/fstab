@@ -1,6 +1,0 @@
-# <file system> <mount point>   <type>  <options>       <dump>  <pass>
-proc            /proc           proc    defaults          0       0
-/dev/mmcblk0p1  /boot           vfat    defaults          0       2
-/dev/mmcblk0p2  /               ext4    defaults,noatime  0       1
-127.0.0.1:8888 /root/mnt/cloud_mail davfs user,rw,_netdev 0 0
-https://webdav.yandex.ru:443 /root/mnt/cloud_yandex davfs user,rw,_netdev 0 0
