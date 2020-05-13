@@ -6,7 +6,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common fail2ban libfuse-dev libwxbase3.0-dev cryptsetup
+apt install mc mosh ufw software-properties-common fail2ban cryptsetup
 ```
 2. ufw
 ```
@@ -39,10 +39,8 @@ mount /dev/mapper/backup ~/mnt/hdd
 
 II Terminal customization
 
-1. Install snap, rust, LSD, zsh, vim-plug,tmp, tmux_config, 
+1. Install rust, LSD, zsh, vim-plug,tmp, tmux_config, 
 ```
-apt install snapd && systemctl enable --now snapd apparmor
-
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 reboot
 cargo install lsd
