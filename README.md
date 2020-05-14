@@ -22,12 +22,9 @@ systemctl start fail2ban && systemctl enable fail2ban
 4. rclone
 ```
 rclone config
-
 systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cloud_google
 systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
 systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_mail
-
-
 ```
 5. encrypt disk
 ```
