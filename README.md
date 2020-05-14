@@ -16,7 +16,7 @@ ufw allow ssh && ufw allow mosh && ufw allow 3389 && ufw enable && ufw reload
 ```
 git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/bash.sh && config_pull
 git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && cd ~/git/raspi-config && chmod +x raspi-config && mv raspi-config /usr/local/bin && raspi-config
-systemctl start fail2ban && systemctl enable fail2ban
+systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 ```
 
 4. rclone
