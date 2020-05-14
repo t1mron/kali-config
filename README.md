@@ -8,17 +8,16 @@ apt update
 apt full-upgrade
 apt install mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup
 ```
-2. ufw
-```
-ufw allow 62971/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable && ufw reload
-```
-3. config files
+2. config files
 ```
 git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/bash.sh && config_pull
 git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && cd ~/git/raspi-config && chmod +x raspi-config && mv raspi-config /usr/local/bin && raspi-config
 systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 ```
-
+3. ufw
+```
+ufw allow 62971/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable && ufw reload
+```
 4. rclone
 ```
 rclone config
