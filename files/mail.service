@@ -1,0 +1,12 @@
+[Unit]                                                                                                  
+Description=Mail Rclone                                                                                 
+After=network-online.target                                                                             
+Wants=network-online.target                                                                             
+                                                                                                        
+[Service]                                                                                              
+Type=notify                                                                                             
+ExecStart=/usr/bin/rclone mount --config /root/.config/rclone/rclone.conf mail: /root/mnt/cloud_mail    
+Restart=on-abort                                                                                        
+                                                                                                        
+[Install]                                                                                               
+WantedBy=default.target                                                                                                               
