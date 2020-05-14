@@ -6,11 +6,12 @@
 function config_pull()
 	{
 	cd ~/git/kali-config/files && git pull;
-	cp bash.sh ~/scripts/
-	cp {antigen.zsh,.zshrc,.p10k.zsh,.tmux.conf.local,bash.sh,.vimrc} ~/
+	cp bash.sh ~/scripts/;
+	cp {antigen.zsh,.zshrc,.p10k.zsh,.tmux.conf.local,bash.sh,.vimrc} ~/;
 	cp hostname /etc/;
 	cp sshd_config /etc/ssh/;
 	cp jail.local /etc/fail2ban/;
+	cp {cloud_google.service,cloud_google.service,cloud_google.service} /lib/systemd/system/;
 	}
 
 # -- aliases ----------------------
