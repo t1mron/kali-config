@@ -6,11 +6,11 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common fail2ban cryptsetup
+apt install mc mosh ufw software-properties-common fail2ban xrdp cryptsetup
 ```
 2. ufw
 ```
-ufw allow ssh && ufw allow mosh && ufw enable && ufw reload
+ufw allow ssh && ufw allow mosh && ufw allow 3389 && ufw enable && ufw reload
 ```
 3. config files
 ```
