@@ -1,0 +1,12 @@
+[Unit]                                                                                                  
+Description=Google rclone                                                                                
+After=network-online.target                                                                             
+Wants=network-online.target                                                                             
+                                                                                                        
+[Service]                                                                                              
+Type=notify                                                                                             
+ExecStart=/usr/bin/rclone mount --config /root/.config/rclone/rclone.conf google: /root/mnt/cloud_google   
+Restart=on-abort                                                                                        
+                                                                                                        
+[Install]                                                                                               
+WantedBy=default.target               
