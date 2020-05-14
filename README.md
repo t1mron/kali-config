@@ -10,7 +10,7 @@ apt install mc mosh ufw software-properties-common rclone fail2ban xrdp cryptset
 ```
 2. ufw
 ```
-ufw allow 62971/tcp && ufw allow mosh && ufw allow 3389 && ufw enable && ufw reload
+ufw allow 62971/tcp && ufw allow 60000:61000/udp&& ufw allow 3389 && ufw enable && ufw reload
 ```
 3. config files
 ```
