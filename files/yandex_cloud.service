@@ -1,0 +1,12 @@
+[Unit]                                                                                                  
+Description=Yandex rclone                                                                                
+After=network-online.target                                                                             
+Wants=network-online.target                                                                             
+                                                                                                        
+[Service]                                                                                              
+Type=notify                                                                                             
+ExecStart=/usr/bin/rclone mount --config /root/.config/rclone/rclone.conf yandex: /root/mnt/cloud_yandex   
+Restart=on-abort                                                                                        
+                                                                                                        
+[Install]                                                                                               
+WantedBy=default.target             
