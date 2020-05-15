@@ -29,6 +29,7 @@ systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_
 ```
 service transmission-daemon start && service transmission-daemon status
 usermod -a -G debian-transmission root
+transmission-remote -a
 
 ```
 6. encrypt disk
@@ -40,7 +41,7 @@ cryptsetup luksClose /dev/mapper/backup
 ```
 mount disk
 ```
-cryptsetup open <your_disk> backup
+cryptsetup open /dev/sda1 backup
 mount /dev/mapper/backup ~/mnt/hdd
 ```
 
