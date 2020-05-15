@@ -27,8 +27,9 @@ systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_
 ```
 5. torrent
 ```
-service transmission-daemon start && service transmission-daemon status
 usermod -a -G debian-transmission root
+service transmission-daemon start && service transmission-daemon enable && service transmission-daemon status
+
 transmission-remote -a
 
 ```
