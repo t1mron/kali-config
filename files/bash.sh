@@ -7,7 +7,7 @@ function config_pull()
 	cd ~/git/kali-config/files && git pull;
 	cp bash.sh ~/scripts/;
 	cp {antigen.zsh,.zshrc,.p10k.zsh,.tmux.conf.local,.vimrc} ~/;
-	cp hostname /etc/;
+	cp {hostname,hosts} /etc/;
 	cp sshd_config /etc/ssh/;
 	cp jail.local /etc/fail2ban/;
 	cp {transmission-daemon.service,cloud_google.service,cloud_mail.service,cloud_yandex.service} /lib/systemd/system/;
