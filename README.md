@@ -10,7 +10,7 @@ apt install mc mosh rsync ufw software-properties-common rclone fail2ban xrdp cr
 ```
 2. config files
 ```
-git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/bash.sh && config_pull
+git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/bash.sh && config_pull && localedef -i en_US -f UTF-8 en_US.UTF-8
 git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && cd ~/git/raspi-config && chmod +x raspi-config && mv raspi-config /usr/local/bin && raspi-config
 systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 ```
