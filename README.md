@@ -6,7 +6,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh rsync ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dnsmasq hostapd bc dkms bison flex libssl-dev
+apt install mc mosh rsync ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dnsmasq hostapd bc dkms 
 ```
 2. config files
 ```
