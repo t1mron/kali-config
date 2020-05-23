@@ -11,7 +11,7 @@ function config_pull()
 	cp {hostname,sysctl.conf} /etc/;
 	cp sshd_config /etc/ssh/;
 	cp jail.local /etc/fail2ban/;
-	cp {transmission-daemon.service,cloud_google.service,cloud_google.service,cloud_google.service} /lib/systemd/system/;
+	cp {transmission-daemon.service,cloud_google.service,cloud_mail.service,cloud_yandex.service} /lib/systemd/system/;
 	}
 
 # -- aliases ----------------------
