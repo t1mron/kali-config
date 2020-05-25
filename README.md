@@ -27,6 +27,11 @@ systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cl
 systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
 systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_mail
 ```
+5. access point
+```
+git clone https://github.com/fastoe/RTL8812BU_for_Raspbian ~/git/kali-config/RTL8812BU_for_Raspbian/
+cd RTL8812BU_for_Raspbian && make &&make install && reboot
+```
 5. torrent
 ```
 usermod -a -G debian-transmission root
