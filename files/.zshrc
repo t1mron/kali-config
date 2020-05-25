@@ -4,7 +4,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 #------------------------------------------------------------------------------
 source /root/antigen.zsh
-source /root/scripts/bash.sh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
