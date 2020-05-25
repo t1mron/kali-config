@@ -17,6 +17,7 @@ systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2b
 3. ufw
 ```
 ufw allow 62971/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable && ufw reload
+systemctl enable xrdp && systemctl restart xrdp
 ```
 4. rclone
 ```
