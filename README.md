@@ -76,10 +76,10 @@ Profit! Enjoy :)
 
 clone sd card and shrink:
 ```
-dd if=/dev/mmcblk0 of=~/mnt/hdd/kali_backup.img
+dd if=/dev/mmcblk0 of=/root/mnt/hdd/downloads/kali_backup.img
 
 git clone https://github.com/Drewsif/PiShrink.git ~/git/PiShrink/ && cd ~/git/PiShrink/ && chmod +x pishrink.sh && mv pishrink.sh /usr/local/bin
-pishrink.sh /root/mnt/hdd/kali_backup.img
+pishrink.sh /root/mnt/hdd/downloads/kali_backup.img
 ```
 
 
