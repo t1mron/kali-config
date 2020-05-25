@@ -20,6 +20,7 @@ ufw allow 62971/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable
 ```
 4. rclone
 ```
+mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
 rclone config
 systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cloud_google
 systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
@@ -42,6 +43,7 @@ cryptsetup luksClose /dev/mapper/backup
 ```
 mount disk
 ```
+mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_
 cryptsetup open /dev/sda1 backup
 mount /dev/mapper/backup ~/mnt/hdd
 ```
