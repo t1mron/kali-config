@@ -19,7 +19,7 @@ systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2b
 ufw allow 62971/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable && ufw reload
 systemctl enable xrdp && systemctl restart xrdp
 ```
-4. rclone
+4. rclone (cloud storage)
 ```
 mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
 rclone config
@@ -34,6 +34,7 @@ rm -rf *.tar.gz
 dkms add ./rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20200205-5960
 dkms install -m rtl88x2bu -v 5.3.1
 modprobe 88x2bu
+reboot
 ```
 5. torrent
 ```
