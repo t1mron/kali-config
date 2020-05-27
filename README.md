@@ -29,10 +29,9 @@ systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_
 ```
 5. access point (RTL8812BU)
 ```
-cd ~/Downloads && wget https://github.com/fastoe/RTL8812BU/releases/download/20200414/rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20200205-5960.tar.gz && tar -zxvf rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20200205-5960.tar.gz 
-rm -rf *.tar.gz
-dkms add ./rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20200205-5960
-dkms install -m rtl88x2bu -v 5.3.1
+cd ~/git/ && git clone https://github.com/cilynx/rtl88x2bu
+dkms add ./rtl88x2bu
+dkms install -m rtl88x2bu -v 5.6.1
 modprobe 88x2bu
 reboot
 ```
