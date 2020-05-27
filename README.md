@@ -29,11 +29,20 @@ systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_
 ```
 5. access point (RTL8812BU)
 ```
+git clone https://github.com/Alexander88207/Tomomi.git ~/git/wifi-driver/ && bash ~/git/wifi-driver/Tomomi.sh
+
+chmod +x raspi-config && mv raspi-config /usr/local/bin && raspi-config
+
+
 cd ~/git/ && git clone https://github.com/cilynx/rtl88x2bu
 dkms add ./rtl88x2bu
 dkms install -m rtl88x2bu -v 5.6.1
 modprobe 88x2bu
 reboot
+
+cd Downloads && wget https://raw.githubusercontent.com/km4ack/pi-scripts/master/autohotspotN-setup && chmod +x autohotspotN-setup && mv autohotspotN-setup /usr/local/bin && autohotspotN-setup
+reboot
+autohotspotN
 ```
 5. torrent
 ```
