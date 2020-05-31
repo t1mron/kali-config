@@ -40,8 +40,7 @@ dkms install -m rtl88x2bu -v 5.6.1
 modprobe 88x2bu
 reboot
 
-./setup-network.sh --install-upgrade --ap-ssid="spot" --ap-password="password" --ap-password-encrypt 
---ap-country-code="RU" --ap-ip-address="192.168.3.1" --wifi-interface="wlan0"
+./setup-network.sh --install-upgrade --ap-ssid="spot" --ap-password="password" --ap-password-encrypt --ap-country-code="RU" --ap-ip-address="192.168.3.1" --wifi-interface="wlan0"
 ```
 5. torrent
 ```
