@@ -6,7 +6,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh rsync ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dnsmasq hostapd dkms 
+apt install mc mosh rsync ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dnsmasq hostapd dhcpcd5 dkms 
 ```
 2. config files
 ```
@@ -40,9 +40,8 @@ dkms install -m rtl88x2bu -v 5.6.1
 modprobe 88x2bu
 reboot
 
-cd Downloads && wget https://raw.githubusercontent.com/km4ack/pi-scripts/master/autohotspotN-setup && chmod +x autohotspotN-setup && mv autohotspotN-setup /usr/local/bin && autohotspotN-setup
-reboot
-autohotspotN
+./setup-network.sh --install-upgrade --ap-ssid="spot" --ap-password="password" --ap-password-encrypt 
+--ap-country-code="RU" --ap-ip-address="192.168.3.1" --wifi-interface="wlan0"
 ```
 5. torrent
 ```
