@@ -5,8 +5,8 @@
 function config_pull()
 	{
 	cd ~/git/kali-config/files && git pull;
-	cp bash.sh ~/scripts/;
-	cp {antigen.zsh,.zshrc,.p10k.zsh,.tmux.conf.local,.vimrc} ~/;
+	cp main.sh ~/scripts/;
+	cp {.tmux.conf,.vimrc} ~/;
 	cp {hostname,hosts} /etc/;
 	cp sshd_config /etc/ssh/;
 	cp jail.local /etc/fail2ban/;
