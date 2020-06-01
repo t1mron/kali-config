@@ -48,7 +48,8 @@ service transmission-daemon start && service transmission-daemon enable && servi
 transmission-remote -w ~/mnt/hdd/downloads/
 transmission-remote -a "link"
 transmission-remote -l
-
+transmission-remote -t ID -r
+transmission-remote -t all -r
 ```
 6. encrypt disk
 ```
