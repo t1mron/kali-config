@@ -44,10 +44,10 @@ reboot
 ```
 5. torrent
 ```
-usermod -a -G debian-transmission root
 service transmission-daemon start && service transmission-daemon enable && service transmission-daemon status
-
-transmission-remote -a
+transmission-remote -w ~/mnt/hdd/downloads/
+transmission-remote -a "link"
+transmission-remote -l
 
 ```
 6. encrypt disk
