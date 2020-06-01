@@ -21,4 +21,4 @@ alias la='ls -a'
 alias lla='ls -la'
 alias lt='ls --tree'
 alias python='python3.8'
-alias tsm="transmission-remote"
+alias tsm='transmission-remote'
