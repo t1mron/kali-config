@@ -240,7 +240,7 @@ action_cf_mwl = cloudflare[cfuser="%(cfemail)s", cftoken="%(cfapikey)s"]
 # in your `jail.local` globally (section [DEFAULT]) or per specific jail section (resp. in 
 # corresponding jail.d/my-jail.local file).
 #
-action_blocklist_de  = blocklist_de[email="%(sender)s", service="%(__name__)s", apikey="%(blocklist_de_apikey)s", agent="%(fail2ban_agent)s"]
+action_blocklist_de  = blocklist_de[email="%(sender)s", service=%(filter)s, apikey="%(blocklist_de_apikey)s", agent="%(fail2ban_agent)s"]
 
 # Report ban via badips.com, and use as blacklist
 #
@@ -276,13 +276,12 @@ action = %(action_)s
 # SSH servers
 #
 
-[sshd] 
+[sshd]
 
 # To use more aggressive sshd modes set filter parameter "mode" in jail.local:
 # normal (default), ddos, extra or aggressive (combines all).
 # See "tests/files/logs/sshd" or "filter.d/sshd.conf" for usage example and details.
 #mode   = normal
-enabled = YES
 port    = ssh
 logpath = %(sshd_log)s
 backend = %(sshd_backend)s
@@ -377,7 +376,6 @@ logpath = /opt/openhab/logs/request.log
 
 
 [nginx-http-auth]
-enabled = YES
 
 port    = http,https
 logpath = %(nginx_error_log)s
@@ -387,13 +385,10 @@ logpath = %(nginx_error_log)s
 # http://nginx.org/en/docs/http/ngx_http_limit_req_module.html
 # or for example see in 'config/filter.d/nginx-limit-req.conf'
 [nginx-limit-req]
-enabled = YES
-
 port    = http,https
 logpath = %(nginx_error_log)s
 
 [nginx-botsearch]
-enabled = YES
 
 port     = http,https
 logpath  = %(nginx_error_log)s
@@ -560,7 +555,6 @@ backend  = %(wuftpd_backend)s
 # logpath = %(syslog_authpriv)s
 # if you want to rely on PAM failed login attempts
 # vsftpd's failregex should match both of those formats
-
 port     = ftp,ftp-data,ftps,ftps-data
 logpath  = %(vsftpd_log)s
 
