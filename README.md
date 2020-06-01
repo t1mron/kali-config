@@ -45,11 +45,11 @@ reboot
 5. torrent
 ```
 service transmission-daemon start && service transmission-daemon enable && service transmission-daemon status
-transmission-remote -w ~/mnt/hdd/downloads/
-transmission-remote -a "link"
-transmission-remote -l
-transmission-remote -t ID -r
-transmission-remote -t all -r
+tsm -w ~/mnt/hdd/downloads/
+tsm -a "link"
+tsm -l
+tsm -t ID -r
+tsm -t all -r
 ```
 6. encrypt disk
 ```
