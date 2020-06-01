@@ -6,7 +6,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dnsmasq hostapd dhcpcd5 dkms 
+apt install mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms dnsmasq hostapd dhcpcd5 
 ```
 2. config files
 ```
