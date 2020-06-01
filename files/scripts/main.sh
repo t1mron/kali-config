@@ -6,10 +6,11 @@ function config_pull()
 	{
 	cd ~/git/kali-config/files/ && git pull;
 	cp ~/git/kali-config/files/scripts/main.sh ~/scripts/;
-	cp {.bashrc,.tmux.conf,.vimrc} ~/;
+	cp ~/git/kali-config/files/scripts/.bashrc ~/;
+	cp {.tmux.conf,.vimrc} ~/;
 	cp ~/git/kali-config/files/host/{hostname,hosts} /etc/;
 	cp ~/git/kali-config/files/host/sshd_config /etc/ssh/;
-	cp jail.local /etc/fail2ban/;
+	cp ~/git/kali-config/files/host/jail.local /etc/fail2ban/;
 	cp ~/git/kali-config/files/systemctl/{transmission-daemon.service,cloud_google.service,cloud_mail.service,cloud_yandex.service} /lib/systemd/system/;
 	}
 
