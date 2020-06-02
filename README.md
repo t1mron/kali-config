@@ -44,7 +44,7 @@ reboot
 ```
 5. torrent
 ```
-service transmission-daemon start && service transmission-daemon enable && service transmission-daemon status
+systemctl enable transmission-daemon.service && service transmission-daemon start && service transmission-daemon status
 tsm -w ~/mnt/hdd/downloads/
 tsm -a "link"
 tsm -l
