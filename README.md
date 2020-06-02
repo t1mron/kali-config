@@ -67,12 +67,13 @@ mount /dev/mapper/backup ~/mnt/hdd
 
 II Terminal customization
 
-1. Install rust, LSD, tmp 
+1. Install rust, LSD, tmp, tmux-config
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 reboot
 cargo install lsd
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/gpakosz/.tmux.git ~/git/tmux-config && cp ~/git/tmux-config/.tmux.conf ~/
 ```
 You need to install custom fonts into your mobile app (for example, blink shell) or into pc (nerd-fonts)<br/>
 
