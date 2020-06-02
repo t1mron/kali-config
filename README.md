@@ -12,11 +12,11 @@ apt install mc mosh ufw software-properties-common rclone fail2ban xrdp cryptset
 ```
 git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/scripts/main.sh && config_pull && localedef -i en_US -f UTF-8 en_US.UTF-8
 git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config && cd ~/git/raspi-config && chmod +x raspi-config && mv raspi-config /usr/local/bin && raspi-config
-systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 ```
 3. ufw
 ```
 ufw allow 62971/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable && ufw reload
+systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 systemctl enable xrdp && systemctl restart xrdp
 ```
 4. rclone (cloud storage)
