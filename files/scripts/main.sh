@@ -7,7 +7,7 @@ function config_pull()
 	cd ~/git/kali-config/files/ && git pull;
 	cp ~/git/kali-config/files/scripts/main.sh ~/scripts/;
 	cp ~/git/kali-config/files/scripts/{.bashrc,.profile} ~/;
-	cp {.tmux.conf,.vimrc} ~/;
+	cp {.tmux.conf.local,.vimrc} ~/;
 	cp ~/git/kali-config/files/host/{hostname,hosts} /etc/;
 	cp ~/git/kali-config/files/host/sshd_config /etc/ssh/;
 	cp ~/git/kali-config/files/host/jail.local /etc/fail2ban/;
