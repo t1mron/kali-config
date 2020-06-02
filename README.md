@@ -1,4 +1,4 @@
-# kali_confiig
+# kali_config
 
 I. Simple server configuration 
 
