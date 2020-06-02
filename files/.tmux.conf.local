@@ -13,6 +13,7 @@ set -g @tpm_plugins '      \
   samoshkin/tmux-plugin-sysstat \
 '
 
+set -g mouse-mode on
 set -g prefix C-w
 set -g @continuum-boot ‘on’
 set -g @continuum-restore ‘on’ 
