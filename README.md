@@ -1,7 +1,7 @@
 # kali_config
 
 I. Simple server configuration 
-
+https://raspberrypi.stackexchange.com/questions/89803/access-point-as-wifi-router-repeater-optional-with-bridge
 1. Install midnight commander, mosh, mosh, 
 ```
 apt update
