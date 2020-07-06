@@ -6,7 +6,7 @@ https://raspberrypi.stackexchange.com/questions/89803/access-point-as-wifi-route
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms dnsmasq hostapd dhcpcd5 
+apt install parted lua5.1 alsa-utils mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms dnsmasq hostapd dhcpcd5 
 ```
 2. config files
 ```
