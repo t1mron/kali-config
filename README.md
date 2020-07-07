@@ -26,7 +26,7 @@ systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cl
 systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
 systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_mail
 ```
-5. access point (RTL8812BU)
+5. AP + Wi-Fi client
 ```
 systemctl unmask hostapd && systemctl enable hostapd
 -Es
