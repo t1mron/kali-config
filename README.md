@@ -1,12 +1,11 @@
 # kali_config
 
 I. Simple server configuration 
-https://raspberrypi.stackexchange.com/questions/89803/access-point-as-wifi-router-repeater-optional-with-bridge
 1. Install midnight commander, mosh, mosh, 
 ```
 apt update
 apt full-upgrade
-apt install parted lua5.1 alsa-utils mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms dnsmasq hostapd dhcpcd5 
+apt install parted lua5.1 alsa-utils mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms dnsmasq hostapd 
 ```
 2. config files
 ```
@@ -29,6 +28,34 @@ systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_
 ```
 5. access point (RTL8812BU)
 ```
+systemctl unmask hostapd && systemctl enable hostapd
+-Es
+apt --autoremove purge ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog
+apt-mark hold ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog openresolv
+rm -r /etc/network /etc/dhcp
+apt --autoremove purge avahi-daemon
+apt-mark hold avahi-daemon libnss-mdns
+apt install libnss-resolve
+ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+systemctl enable systemd-networkd.service systemd-resolved.service
+
+cat > /etc/hostapd/hostapd.conf <<EOF
+interface=ap0
+driver=nl80211
+ssid=spot
+country_code=RU
+hw_mode=g
+channel=1
+auth_algs=1
+wpa=2
+wpa_passphrase=hardpassword
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+EOF
+
+
+
 git clone https://github.com/Alexander88207/Tomomi.git ~/git/wifi-driver/ && bash ~/git/wifi-driver/Tomomi.sh
 
 chmod +x raspi-config && mv raspi-config /usr/local/bin && raspi-config
