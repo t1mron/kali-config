@@ -14,7 +14,7 @@ wget -O /usr/local/bin/kalipi-config https://raw.githubusercontent.com/Re4son/RP
 ```
 3. ufw
 ```
-ufw allow 62971/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable && ufw reload
+ufw allow 2288/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable && ufw reload
 systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 systemctl enable xrdp && systemctl restart xrdp
 ```
