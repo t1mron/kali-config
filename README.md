@@ -54,6 +54,12 @@ wpa_pairwise=TKIP
 rsn_pairwise=CCMP
 EOF
 
+chmod 600 /etc/hostapd/hostapd.conf
+
+systemctl --full edit hostapd.service (#After=network.target)
+
+
+
 
 
 git clone https://github.com/Alexander88207/Tomomi.git ~/git/wifi-driver/ && bash ~/git/wifi-driver/Tomomi.sh
