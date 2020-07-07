@@ -5,7 +5,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install parted lua5.1 alsa-utils mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms dnsmasq hostapd 
+apt install parted lua5.1 alsa-utils mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms hostapd 
 ```
 2. config files
 ```
