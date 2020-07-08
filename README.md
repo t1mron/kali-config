@@ -120,8 +120,7 @@ cryptsetup luksClose /dev/mapper/backup
 ```
 mount disk
 ```
-mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_google,cloud_yandex}
-cryptsetup open /dev/sda1 backup
+cryptsetup open /dev/sdx1 backup
 mount /dev/mapper/backup ~/mnt/hdd
 ```
 
