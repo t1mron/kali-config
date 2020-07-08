@@ -17,15 +17,7 @@ git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source
 ufw allow 1724/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable && ufw reload
 systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 ```
-4. rclone (cloud storage)
-```
-mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
-rclone config
-systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cloud_google
-systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
-systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_mail
-```
-5. AP + Wi-Fi client
+4. AP + Wi-Fi client
 ```
 systemctl unmask hostapd && systemctl enable hostapd
 -Es
@@ -74,7 +66,15 @@ reboot
 
 ./setup-network.sh --install-upgrade --ap-ssid="spot" --ap-password="password" --ap-password-encrypt --ap-country-code="RU" --ap-ip-address="192.168.3.1" --wifi-interface="wlan0"
 ```
-5. torrent
+5. rclone (cloud storage)
+```
+mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
+rclone config
+systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cloud_google
+systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
+systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_mail
+```
+6. torrent
 ```
 systemctl enable transmission-daemon.service && service transmission-daemon start && service transmission-daemon status
 tsm -w ~/mnt/hdd/downloads/
@@ -83,20 +83,6 @@ tsm -l
 tsm -t ID -r
 tsm -t all -r
 ```
-6. encrypt disk
-```
-cryptsetup -v --verify-passphrase luksFormat <your_disk>
-cryptsetup luksOpen <your_disk> backup
-mkfs.ext4 /dev/mapper/backup
-cryptsetup luksClose /dev/mapper/backup
-```
-mount disk
-```
-mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_google,cloud_yandex}
-cryptsetup open /dev/sda1 backup
-mount /dev/mapper/backup ~/mnt/hdd
-```
-
 II Terminal customization
 
 1. Install rust, LSD, tmp, tmux-config
@@ -117,14 +103,27 @@ vim: :PlugInstall
 ```
 Profit! Enjoy :)
 
-clone sd card and shrink:
+
+clone sd card and shrink
 ```
 dd if=/dev/mmcblk0 of=/root/mnt/hdd/downloads/kali_backup.img
 
 git clone https://github.com/Drewsif/PiShrink.git ~/git/PiShrink/ && cd ~/git/PiShrink/ && chmod +x pishrink.sh && mv pishrink.sh /usr/local/bin
 pishrink.sh /root/mnt/hdd/downloads/kali_backup.img
 ```
-
+encrypt disk
+```
+cryptsetup -v --verify-passphrase luksFormat <your_disk>
+cryptsetup luksOpen <your_disk> backup
+mkfs.ext4 /dev/mapper/backup
+cryptsetup luksClose /dev/mapper/backup
+```
+mount disk
+```
+mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_google,cloud_yandex}
+cryptsetup open /dev/sda1 backup
+mount /dev/mapper/backup ~/mnt/hdd
+```
 
 
 
