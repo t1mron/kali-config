@@ -33,13 +33,13 @@ systemctl enable systemd-networkd.service systemd-resolved.service
 cat > /etc/hostapd/hostapd.conf <<EOF
 interface=ap0
 driver=nl80211
-ssid=spot
+ssid=sp0t 
 country_code=RU
 hw_mode=g
 channel=1
 auth_algs=1
 wpa=2
-wpa_passphrase=hardpassword
+wpa_passphrase=!VeryHardPassw0rd!
 wpa_key_mgmt=WPA-PSK
 wpa_pairwise=TKIP
 rsn_pairwise=CCMP
