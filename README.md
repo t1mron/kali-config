@@ -21,7 +21,7 @@ systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2b
 4. AP + Wi-Fi client
 ```
 systemctl unmask hostapd && systemctl enable hostapd
--Es
+sudo -Es
 apt --autoremove purge ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog
 apt-mark hold ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog openresolv
 rm -r /etc/network /etc/dhcp
