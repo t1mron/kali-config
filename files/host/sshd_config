@@ -10,7 +10,7 @@
 # possible, but leave them commented.  Uncommented options override the
 # default value.
 
-Port 67342
+Port 1724
 
 #AddressFamily any
 #ListenAddress 0.0.0.0
