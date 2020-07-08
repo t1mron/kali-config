@@ -1,21 +1,21 @@
 # kali_config
 
 I. Simple server configuration 
-1. Install midnight commander, mosh, mosh, 
+1. Packages  
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms hostapd 
+apt install mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms hostapd
+systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
 ```
-2. config files
+2. Configuration files
 ```
 git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/scripts/main.sh && config_pull && localedef -i en_US -f UTF-8 en_US.UTF-8
 ```
-3. ufw
+3. Firewall
 ```
 ufw allow 1724/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable && ufw reload
 systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
-systemctl enable xrdp && systemctl restart xrdp
 ```
 4. rclone (cloud storage)
 ```
