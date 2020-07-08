@@ -7,6 +7,7 @@ apt update
 apt full-upgrade
 apt install mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms hostapd
 systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
+touch ~/.hushlogin
 ```
 2. Configuration files
 ```
