@@ -10,7 +10,7 @@ touch ~/.hushlogin
 ```
 2. Configuration files
 ```
-git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/scripts/main.sh && config_pull && localedef -i en_US -f UTF-8 en_US.UTF-8
+git clone https://github.com/t1mron/raspi-config.git ~/git/raspi-config/ && source ~/git/raspi-config/files/scripts/main.sh && update_config 
 ```
 3. Firewall
 ```
