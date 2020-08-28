@@ -17,9 +17,30 @@ mkdir ~/scripts && git clone https://github.com/t1mron/raspi-config.git ~/git/ra
 ufw allow 1724/tcp && ufw allow 60000:61000/udp && ufw enable && ufw reload
 systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 ```
-4. AP + Wi-Fi client
+4. Wi-Fi client
 ```
+nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
+```
+country=RU
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
 
+network={
+    ssid="Home"
+    psk="password"
+    priority=1
+    id_str="home"
+}
+
+network={
+    ssid="sp0t"
+    psk="password"
+    priority=9
+    id_str="ap"
+}
+```
+```
 
 
 
