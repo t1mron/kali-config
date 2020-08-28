@@ -105,7 +105,7 @@ clone sd card and shrink
 ```
 dd if=/dev/mmcblk0 of=/root/mnt/hdd/downloads/raspi_backup.img
 
-git clone https://github.com/Drewsif/PiShrink.git ~/git/PiShrink/ && cd ~/git/PiShrink/ && chmod +x pishrink.sh && mv pishrink.sh /usr/local/bin
+git clone https://github.com/Drewsif/PiShrink.git ~/git/PiShrink/ && chmod +x ~/git/PiShrink/pishrink.sh && cp -r ~/git/PiShrink/pishrink.sh /usr/local/bin
 pishrink.sh /root/mnt/hdd/downloads/raspi_backup.img
 ```
 encrypt disk
@@ -122,6 +122,6 @@ mount /dev/mapper/backup ~/mnt/hdd
 ```
 III Kali tools
 ```
-git clone https://github.com/LionSec/katoolin.git ~/git/katoolin && cp -r ~/git/katoolin/katoolin.py /usr/bin/katoolin && chmod +x /usr/bin/katoolin && katoolin
+git clone https://github.com/LionSec/katoolin.git ~/git/katoolin/ && cp -r ~/git/katoolin/katoolin.py /usr/bin/katoolin && chmod +x /usr/bin/katoolin && katoolin
 ```
 
