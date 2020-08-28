@@ -120,6 +120,8 @@ mount disk
 cryptsetup open /dev/sdx1 backup
 mount /dev/mapper/backup ~/mnt/hdd
 ```
-
-
+III Kali tools
+```
+git clone https://github.com/LionSec/katoolin.git ~/git/katoolin && cp -r ~/git/katoolin/katoolin.py /usr/bin/katoolin && chmod +x /usr/bin/katoolin && katoolin
+```
 
