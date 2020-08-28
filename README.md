@@ -5,7 +5,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc vim tmux git mosh ufw software-properties-common rclone fail2ban cryptsetup transmission-cli transmission-common transmission-daemon dkms hostapd udhcpd
+apt install mc vim tmux git mosh ufw software-properties-common rclone fail2ban cryptsetup transmission-cli transmission-common transmission-daemon dkms 
 touch ~/.hushlogin
 ```
 2. Configuration files
