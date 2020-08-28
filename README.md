@@ -66,6 +66,13 @@ systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_
 ```
 6. torrent
 ```
+cat > /etc/sysctl.conf <<EOF
+net.core.rmem_max = 16777216
+net.core.wmem_max = 4194304
+EOF
+```
+```
+sysctl -p
 systemctl enable transmission-daemon.service && service transmission-daemon start && service transmission-daemon status
 tsm -w ~/mnt/hdd/downloads/
 tsm -a "link"
