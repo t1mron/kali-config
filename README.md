@@ -5,7 +5,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc vim tmux git mosh ufw xrdp software-properties-common rclone fail2ban cryptsetup transmission-cli transmission-common transmission-daemon dkms 
+apt install mc vim tmux git mosh ufw xrdp software-properties-common rclone fail2ban cryptsetup transmission-cli transmission-common transmission-daemon
 systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
 touch ~/.hushlogin
 ```
