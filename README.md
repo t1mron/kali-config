@@ -16,7 +16,7 @@ mkdir ~/scripts && git clone https://github.com/t1mron/raspi-config.git ~/git/ra
 ```
 3. Firewall
 ```
-ufw allow 1724/tcp && ufw allow 3389/tcp && ufw allow 9091/tcp && ufw allow 60000:61000/udp && ufw enable && ufw reload
+ufw allow 1724/tcp && ufw allow 3389/tcp && ufw allow 60000:61000/udp && ufw enable && ufw reload
 systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 ```
 4. Wi-Fi client
