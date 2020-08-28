@@ -5,12 +5,12 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common rclone fail2ban cryptsetup transmission-cli transmission-common transmission-daemon dkms hostapd udhcpd
+apt install mc git mosh ufw software-properties-common rclone fail2ban cryptsetup transmission-cli transmission-common transmission-daemon dkms hostapd udhcpd
 touch ~/.hushlogin
 ```
 2. Configuration files
 ```
-git clone https://github.com/t1mron/raspi-config.git ~/git/raspi-config/ && source ~/git/raspi-config/files/scripts/main.sh && update_config 
+mkdir ~/scripts && git clone https://github.com/t1mron/raspi-config.git ~/git/raspi-config/ && source ~/git/raspi-config/files/scripts/main.sh && update_config 
 ```
 3. Firewall
 ```
