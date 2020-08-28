@@ -37,7 +37,7 @@ network={
 network={
     ssid="sp0t"
     psk="password"
-    priority=9
+    priority=10
     id_str="ap"
 }
 ```
