@@ -5,60 +5,25 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw software-properties-common rclone fail2ban xrdp cryptsetup transmission-cli transmission-common transmission-daemon dkms hostapd dhcpd
-systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
+apt install mc mosh ufw software-properties-common rclone fail2ban cryptsetup transmission-cli transmission-common transmission-daemon dkms hostapd dhcpd
 touch ~/.hushlogin
 ```
 2. Configuration files
 ```
 git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/scripts/main.sh && config_pull && localedef -i en_US -f UTF-8 en_US.UTF-8
-git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config/ && cp ~/git/raspi-config/raspi-config /usr/local/bin/ && chmod 755 /usr/local/bin/raspi-config
 ```
 3. Firewall
 ```
-ufw allow 1724/tcp && ufw allow 60000:61000/udp && ufw allow 3389 && ufw enable && ufw reload
+ufw allow 1724/tcp && ufw allow 60000:61000/udp && ufw enable && ufw reload
 systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 ```
 4. AP + Wi-Fi client
 ```
-systemctl unmask hostapd && systemctl enable hostapd
-sudo -Es
-apt --autoremove purge ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog
-apt-mark hold ifupdown dhcpcd5 isc-dhcp-client isc-dhcp-common rsyslog openresolv
-rm -r /etc/network /etc/dhcp
-apt --autoremove purge avahi-daemon
-apt-mark hold avahi-daemon libnss-mdns
-apt install libnss-resolve
-ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-systemctl enable systemd-networkd.service systemd-resolved.service
-
-cat > /etc/hostapd/hostapd.conf <<EOF
-interface=ap0
-driver=nl80211
-ssid=sp0t 
-country_code=RU
-hw_mode=g
-channel=1
-auth_algs=1
-wpa=2
-wpa_passphrase=hardpassword
-wpa_key_mgmt=WPA-PSK
-wpa_pairwise=TKIP
-rsn_pairwise=CCMP
-EOF
-
-chmod 600 /etc/hostapd/hostapd.conf
-
-systemctl --full edit hostapd.service (#After=network.target)
-
 
 
 
 
 git clone https://github.com/Alexander88207/Tomomi.git ~/git/wifi-driver/ && bash ~/git/wifi-driver/Tomomi.sh
-
-chmod +x raspi-config && mv raspi-config /usr/local/bin && raspi-config
-
 
 cd ~/git/ && git clone https://github.com/cilynx/rtl88x2bu
 dkms add ./rtl88x2bu
