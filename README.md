@@ -110,7 +110,7 @@ clone sd card and shrink
 ```
 dd if=/dev/mmcblk0 of=/root/mnt/hdd/downloads/raspi_backup.img
 
-git clone https://github.com/Drewsif/PiShrink.git ~/git/PiShrink/ && cp -r ~/git/PiShrink/pishrink.sh /usr/local/bin/pishrink && chmod +x /usr/local/bin/pishrink
+git clone https://github.com/Drewsif/PiShrink.git ~/git/PiShrink/ && cp -r ~/git/PiShrink/pishrink.sh /usr/local/bin/ && chmod +x /usr/local/bin/pishrink.sh
 pishrink /root/mnt/hdd/downloads/raspi_backup.img
 ```
 encrypt disk
