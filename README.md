@@ -42,6 +42,23 @@ network={
     id_str="ap"
 }
 ```
+```
+cat > /etc/network/interfaces <<EOF
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+    wpa-conf /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+EOF
+```
+```
+systemctl start wpa_supplicant &&  systemctl enable wpa_supplicant && systemctl status wpa_supplicant
+```
 5. rclone (cloud storage)
 ```
 mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
