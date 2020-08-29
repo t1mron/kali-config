@@ -104,10 +104,17 @@ sudo dkms build -m rtl88x2bu -v ${VER}
 sudo dkms install -m rtl88x2bu -v ${VER}
 sudo modprobe 88x2bu
 ```
-
 USB 3.0 support
 ```
 modprobe 88x2bu rtw_switch_usb_mode=1
+```
+Static WLAN name:
+```
+ip a
+nano /etc/udev/rules.d/72-001.rules
+```
+```
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="b8:27:eb:98:a0:cd", NAME="wlan1"
 ```
 Profit! Enjoy :)
 
