@@ -93,9 +93,12 @@ git clone https://github.com/LionSec/katoolin.git ~/git/katoolin/ && cp -r ~/git
 ```
 2. WiFi-driver RTL88x2B
 ```
-apt dist-upgrade
 apt install libelf-dev make-guile dkms libncurses5-dev bc 
 git clone https://github.com/MyDynasty/RTL88x2BU-Linux-Driver.git ~/git/RTL88x2BU-Linux-Driver/ && cd ~/git/RTL88x2BU-Linux-Driver/ && make && make install && reboot
+```
+USB 3.0 support
+```
+modprobe 88x2bu rtw_switch_usb_mode=1
 ```
 Profit! Enjoy :)
 
