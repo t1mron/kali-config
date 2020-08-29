@@ -4,14 +4,14 @@
 # -- functions ----------------------
 function update_config()
 	{
-	cd ~/git/raspi-config/files/ && git pull;
-	cp ~/git/raspi-config/files/scripts/main.sh ~/scripts/;
-	cp ~/git/raspi-config/files/scripts/{.bashrc,.profile} ~/;
+	cd ~/git/kali-config/files/ && git pull;
+	cp ~/git/kali-config/files/scripts/main.sh ~/scripts/;
+	cp ~/git/kali-config/files/scripts/{.bashrc,.profile} ~/;
 	cp {.tmux.conf.local,.vimrc} ~/;
-	cp ~/git/raspi-config/files/host/{hostname,hosts} /etc/;
-	cp ~/git/raspi-config/files/host/sshd_config /etc/ssh/;
-	cp ~/git/raspi-config/files/host/jail.local /etc/fail2ban/;
-	cp ~/git/raspi-config/files/systemctl/{transmission-daemon.service,cloud_google.service,cloud_mail.service,cloud_yandex.service} /lib/systemd/system/;
+	cp ~/git/kali-config/files/host/{hostname,hosts} /etc/;
+	cp ~/git/kali-config/files/host/sshd_config /etc/ssh/;
+	cp ~/git/kali-config/files/host/jail.local /etc/fail2ban/;
+	cp ~/git/kali-config/files/systemctl/{transmission-daemon.service,cloud_google.service,cloud_mail.service,cloud_yandex.service} /lib/systemd/system/;
 	}
 
 # -- aliases ----------------------
