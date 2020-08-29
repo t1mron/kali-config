@@ -21,7 +21,7 @@ systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2b
 ```
 4. Wi-Fi client
 ```
-nano /etc/wpa_supplicant/wpa_supplicant.conf
+nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 ```
 ```
 country=RU
