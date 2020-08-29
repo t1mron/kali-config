@@ -1,18 +1,18 @@
-# raspi-config
+# kali-config
 
 I. Simple server configuration 
 1. Packages  
 ```
 apt update
 apt full-upgrade
-apt install mc vim tmux mosh ufw xrdp software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon
-curl https://rclone.org/install.sh | sudo bash
+apt install mc mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon
 systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
 touch ~/.hushlogin
 ```
 2. Configuration files
 ```
-mkdir ~/scripts && git clone https://github.com/t1mron/raspi-config.git ~/git/raspi-config/ && source ~/git/raspi-config/files/scripts/main.sh && update_config 
+mkdir ~/scripts && git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/scripts/main.sh && update_config 
+git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config/ && cp ~/git/raspi-config/raspi-config /usr/local/bin/ && chmod 755 /usr/local/bin/raspi-config
 ```
 3. Firewall
 ```
@@ -87,11 +87,7 @@ Press prefix + I (capital i, as in Install) to fetch the plugins
 vim: :PlugInstall
 ```
 III Kali tools
-1. Packages
-```
-git clone https://github.com/LionSec/katoolin.git ~/git/katoolin/ && cp -r ~/git/katoolin/katoolin.py /usr/bin/katoolin && chmod +x /usr/bin/katoolin && katoolin
-```
-2. WiFi-driver RTL88x2B
+1. WiFi-driver RTL88x2B
 ```
 apt install dkms bc 
 git clone https://github.com/cilynx/rtl88x2bu ~/git/rtl88x2bu/ && cd ~/git/rtl88x2bu/
