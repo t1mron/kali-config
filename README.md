@@ -42,20 +42,6 @@ network={
     id_str="ap"
 }
 ```
-```
-
-
-
-git clone https://github.com/Alexander88207/Tomomi.git ~/git/wifi-driver/ && bash ~/git/wifi-driver/Tomomi.sh
-
-cd ~/git/ && git clone https://github.com/cilynx/rtl88x2bu
-dkms add ./rtl88x2bu
-dkms install -m rtl88x2bu -v 5.6.1
-modprobe 88x2bu
-reboot
-
-./setup-network.sh --install-upgrade --ap-ssid="spot" --ap-password="password" --ap-password-encrypt --ap-country-code="RU" --ap-ip-address="192.168.3.1" --wifi-interface="wlan0"
-```
 5. rclone (cloud storage)
 ```
 mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
@@ -75,6 +61,8 @@ EOF
 sysctl -p
 systemctl enable transmission-daemon.service && service transmission-daemon start && service transmission-daemon status
 tsm -w ~/mnt/hdd/downloads/
+```
+```
 tsm -a "link"
 tsm -l
 tsm -t ID -r
@@ -99,12 +87,17 @@ Press prefix + I (capital i, as in Install) to fetch the plugins
 vim: :PlugInstall
 ```
 III Kali tools
+1. Packages
 ```
 git clone https://github.com/LionSec/katoolin.git ~/git/katoolin/ && cp -r ~/git/katoolin/katoolin.py /usr/bin/katoolin && chmod +x /usr/bin/katoolin && katoolin
 ```
-
+2. WiFi-driver RTL88x2B
+```
+apt dist-upgrade
+apt install libelf-dev make-guile dkms libncurses5-dev bc 
+git clone https://github.com/MyDynasty/RTL88x2BU-Linux-Driver.git ~/git/RTL88x2BU-Linux-Driver/ && cd ~/git/RTL88x2BU-Linux-Driver/ && make && make install && reboot
+```
 Profit! Enjoy :)
-
 
 clone sd card and shrink
 ```
