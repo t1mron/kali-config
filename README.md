@@ -93,9 +93,18 @@ git clone https://github.com/LionSec/katoolin.git ~/git/katoolin/ && cp -r ~/git
 ```
 2. WiFi-driver RTL88x2B
 ```
-apt install libelf-dev make-guile dkms libncurses5-dev bc 
-git clone https://github.com/MyDynasty/RTL88x2BU-Linux-Driver.git ~/git/RTL88x2BU-Linux-Driver/ && cd ~/git/RTL88x2BU-Linux-Driver/ && make && make install && reboot
+apt install dkms bc 
+git clone https://github.com/cilynx/rtl88x2bu ~/git/rtl88x2bu/ && cd ~/git/rtl88x2bu/
+sed -i 's/I386_PC = y/I386_PC = n/' Makefile
+sed -i 's/ARM_RPI = n/ARM_RPI = y/' Makefile
+VER=$(sed -n 's/\PACKAGE_VERSION="\(.*\)"/\1/p' dkms.conf)
+sudo rsync -rvhP ./ /usr/src/rtl88x2bu-${VER}
+sudo dkms add -m rtl88x2bu -v ${VER}
+sudo dkms build -m rtl88x2bu -v ${VER}
+sudo dkms install -m rtl88x2bu -v ${VER}
+sudo modprobe 88x2bu
 ```
+
 USB 3.0 support
 ```
 modprobe 88x2bu rtw_switch_usb_mode=1
