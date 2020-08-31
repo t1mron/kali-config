@@ -122,12 +122,16 @@ SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="b8:27:eb:98:a0:cd", NAME="wlan1
 ```
 Profit! Enjoy :)
 
+install img in sd card
+```
+dd bs=4M if=kali_backup.img of=/dev/sdX conv=fsync
+```
 clone sd card and shrink
 ```
-dd if=/dev/mmcblk0 of=/root/mnt/hdd/downloads/raspi_backup.img
+dd if=/dev/mmcblk0 of=/root/mnt/hdd/downloads/kali_backup.img
 
 git clone https://github.com/Drewsif/PiShrink.git ~/git/PiShrink/ && cp -r ~/git/PiShrink/pishrink.sh /usr/local/bin/pishrink && chmod +x /usr/local/bin/pishrink
-pishrink /root/mnt/hdd/downloads/raspi_backup.img
+pishrink /root/mnt/hdd/downloads/kali_backup.img
 ```
 encrypt disk
 ```
