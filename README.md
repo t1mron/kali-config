@@ -5,7 +5,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install mc mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon
+apt install mc mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon dkms
 systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
 touch ~/.hushlogin
 ```
@@ -106,7 +106,7 @@ vim: :PlugInstall
 III Kali tools
 1. WiFi-driver RTL8812BU
 ```
-git clone https://github.com/fastoe/RTL8812BU.git ~/git/RTL8812BU && cd ~/git/RTL8812BU/rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20200205-5960 && make && make install && reboot
+git clone https://github.com/fastoe/RTL8812BU.git ~/git/RTL8812BU && dkms add ~/git/RTL8812BU/rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20200205-5960 && dkms install -m rtl88x2bu -v 5.3.1 && modprobe 88x2bu && reboot
 ```
 USB 3.0 support
 ```
