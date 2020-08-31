@@ -104,18 +104,9 @@ Press prefix + I (capital i, as in Install) to fetch the plugins
 vim: :PlugInstall
 ```
 III Kali tools
-1. WiFi-driver RTL88x2B
+1. WiFi-driver RTL8812BU
 ```
-apt install dkms bc 
-git clone https://github.com/cilynx/rtl88x2bu ~/git/rtl88x2bu/ && cd ~/git/rtl88x2bu/
-sed -i 's/I386_PC = y/I386_PC = n/' Makefile
-sed -i 's/ARM_RPI = n/ARM_RPI = y/' Makefile
-VER=$(sed -n 's/\PACKAGE_VERSION="\(.*\)"/\1/p' dkms.conf)
-sudo rsync -rvhP ./ /usr/src/rtl88x2bu-${VER}
-sudo dkms add -m rtl88x2bu -v ${VER}
-sudo dkms build -m rtl88x2bu -v ${VER}
-sudo dkms install -m rtl88x2bu -v ${VER}
-sudo modprobe 88x2bu
+git clone https://github.com/fastoe/RTL8812BU.git ~/git/RTL8812BU && cd ~/git/RTL8812BU/rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20200205-5960 && make && make install && reboot
 ```
 USB 3.0 support
 ```
