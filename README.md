@@ -126,6 +126,12 @@ SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="b8:27:eb:98:a0:cd", NAME="wlan1
 ```
 Profit! Enjoy :)
 
+
+
+
+
+
+
 install img in sd card
 ```
 dd bs=4M if=kali_backup.img of=/dev/sdX conv=fsync
