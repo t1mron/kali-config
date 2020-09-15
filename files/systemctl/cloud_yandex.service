@@ -5,7 +5,7 @@ Wants=network-online.target
                                                                                                         
 [Service]                                                                                              
 Type=notify                                                                                             
-ExecStart=/usr/bin/rclone mount --config /root/.config/rclone/rclone.conf yandex: /root/mnt/cloud_yandex   
+ExecStart=/usr/bin/rclone mount --config /home/pi/.config/rclone/rclone.conf yandex: /home/pi/media/cloud_yandex   
 Restart=on-abort                                                                                        
                                                                                                         
 [Install]                                                                                               
