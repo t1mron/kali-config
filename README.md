@@ -44,7 +44,7 @@ network={
 ```
 5. rclone (cloud storage)
 ```
-mkdir ~/media/{hdd,cloud_mail,cloud_yandex,cloud_google}
+mkdir ~/mnt&&mkdir ~/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
 rclone config
 sudo systemctl start cloud_google&&sudo systemctl enable cloud_google&&sudo systemctl status cloud_google
 sudo systemctl start cloud_yandex&&sudo systemctl enable cloud_yandex&&sudo systemctl status cloud_yandex
@@ -87,14 +87,7 @@ Press prefix + I (capital i, as in Install) to fetch the plugins
 vim: :PlugInstall
 ```
 III Kali tools
-Static WLAN name:
-```
-ip a
-nano /etc/udev/rules.d/72-001.rules
-```
-```
-SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="b8:27:eb:98:a0:cd", NAME="wlan1"
-```
+
 Profit! Enjoy :)
 
 install img in sd card
