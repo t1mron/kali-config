@@ -5,13 +5,13 @@
 function update_config()
 	{
 	cd ~/git/raspi-config/files/ && git pull;
-	cp ~/git/raspi-config/files/scripts/main.sh ~/scripts/;
-	cp ~/git/raspi-config/files/scripts/{.bashrc,.profile} ~/;
-	cp {.tmux.conf.local,.vimrc} ~/;
-	cp ~/git/raspi-config/files/host/{hostname,hosts} /etc/;
-	cp ~/git/raspi-config/files/host/sshd_config /etc/ssh/;
-	cp ~/git/raspi-config/files/host/jail.local /etc/fail2ban/;
-	cp ~/git/raspi-config/files/systemctl/{transmission-daemon.service,cloud_google.service,cloud_mail.service,cloud_yandex.service} /lib/systemd/system/;
+	sudo cp ~/git/raspi-config/files/scripts/main.sh ~/scripts/;
+	sudo cp ~/git/raspi-config/files/scripts/{.bashrc,.profile} ~/;
+	sudo cp {.tmux.conf.local,.vimrc} ~/;
+	sudo cp ~/git/raspi-config/files/host/{hostname,hosts} /etc/;
+	sudo cp ~/git/raspi-config/files/host/sshd_config /etc/ssh/;
+	sudo cp ~/git/raspi-config/files/host/jail.local /etc/fail2ban/;
+	sudo cp ~/git/raspi-config/files/systemctl/{transmission-daemon.service,cloud_google.service,cloud_mail.service,cloud_yandex.service} /lib/systemd/system/;
 	}
 
 # -- aliases ----------------------
