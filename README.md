@@ -6,6 +6,7 @@ I. Simple server configuration
 sudo apt update
 sudo apt full-upgrade
 sudo apt install vim tmux mc mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon dkms
+curl https://rclone.org/install.sh | sudo bash
 systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
 touch ~/.hushlogin
 ```
@@ -20,7 +21,7 @@ sudo systemctl start fail2ban && sudo systemctl enable fail2ban && sudo systemct
 ```
 4. Wi-Fi client
 ```
-nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 ```
 ```
 country=RU
@@ -43,7 +44,7 @@ network={
 ```
 5. rclone (cloud storage)
 ```
-mkdir /root/mnt && mkdir /root/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
+mkdir ~/mnt && mkdir ~/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
 rclone config
 systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cloud_google
 systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
