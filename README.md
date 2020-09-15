@@ -3,9 +3,9 @@
 I. Simple server configuration 
 1. Packages  
 ```
-apt update
-apt full-upgrade
-apt install vim tmux mc gparted mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon dkms
+sudo apt update
+sudo apt full-upgrade
+sudo apt install vim tmux mc gparted mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon dkms
 curl https://rclone.org/install.sh | sudo bash
 systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
 touch ~/.hushlogin
@@ -16,12 +16,12 @@ mkdir ~/scripts && git clone https://github.com/t1mron/raspi-config.git ~/git/ra
 ```
 3. Firewall
 ```
-ufw allow 1724/tcp && ufw allow 2288/tcp && ufw allow 60000:61000/udp && ufw enable && ufw reload
-systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
+sudo ufw allow 1724/tcp &&sudo ufw allow 2288/tcp &&sudo ufw allow 60000:61000/udp &&sudo ufw enable &&sudo ufw reload
+sudo systemctl start fail2ban &&sudo systemctl enable fail2ban &&sudo systemctl status fail2ban
 ```
 4. Wi-Fi client
 ```
-nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 ```
 ```
 country=RU
