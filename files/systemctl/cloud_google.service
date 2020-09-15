@@ -4,10 +4,9 @@ After=network-online.target
 Wants=network-online.target                                                                             
                                                                                                         
 [Service]                                                                                              
-Type=simple   
+Type=notify  
 ExecStart=/usr/bin/rclone mount --allow-other --config /home/pi/.config/rclone/rclone.conf --drive-shared-with-me google: /home/pi/media/cloud_google 
-Restart=always
-RestartSec=10
+Restart=on-abort   
                                                                                                         
 [Install]                                                                                               
 WantedBy=default.target             
