@@ -1,4 +1,4 @@
-# kali-config
+# raspi-config
 
 I. Simple server configuration 
 1. Packages  
