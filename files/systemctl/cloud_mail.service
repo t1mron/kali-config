@@ -5,7 +5,7 @@ Wants=network-online.target
                                                                                                         
 [Service]                                                                                              
 Type=notify                                                                                             
-ExecStart=/usr/bin/rclone mount --config /home/pi/.config/rclone/rclone.conf mail: /home/pi/media/cloud_mail    
+ExecStart=/usr/bin/rclone mount --allow-other --config /home/pi/.config/rclone/rclone.conf mail: /home/pi/mnt/cloud_mail    
 Restart=on-abort                                                                                        
                                                                                                         
 [Install]                                                                                               
