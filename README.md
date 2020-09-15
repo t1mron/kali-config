@@ -44,7 +44,7 @@ network={
 ```
 5. rclone (cloud storage)
 ```
-mkdir ~/mnt && mkdir ~/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
+mkdir -m 777 ~/mnt && mkdir ~/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
 rclone config
 systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cloud_google
 systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
