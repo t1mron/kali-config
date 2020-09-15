@@ -10,4 +10,4 @@ mesg n || true
 
 export PATH="$HOME/.cargo/bin:$PATH"
 
-source /root/scripts/main.sh
+source ~/scripts/main.sh
