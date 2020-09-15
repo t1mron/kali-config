@@ -46,9 +46,9 @@ network={
 ```
 mkdir ~/mnt && mkdir ~/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
 rclone config
-systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cloud_google
-systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
-systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_mail
+sudo systemctl start cloud_google&&sudo systemctl enable cloud_google&&sudo systemctl status cloud_google
+sudo systemctl start cloud_yandex&&sudo systemctl enable cloud_yandex&&sudo systemctl status cloud_yandex
+sudo systemctl start cloud_mail&&sudo systemctl enable cloud_mail&&sudo systemctl status cloud_mail
 ```
 6. torrent
 ```
