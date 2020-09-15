@@ -3,9 +3,9 @@
 I. Simple server configuration 
 1. Packages  
 ```
-sudo apt update
-sudo apt full-upgrade
-sudo apt install vim tmux mc mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon dkms
+apt update
+apt full-upgrade
+apt install vim tmux mc mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon dkms
 curl https://rclone.org/install.sh | sudo bash
 systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
 touch ~/.hushlogin
@@ -16,12 +16,12 @@ mkdir ~/scripts && git clone https://github.com/t1mron/raspi-config.git ~/git/ra
 ```
 3. Firewall
 ```
-sudo ufw allow 1724/tcp && sudo ufw allow 2288/tcp && sudo ufw allow 60000:61000/udp && sudo ufw enable && sudo ufw reload
-sudo systemctl start fail2ban && sudo systemctl enable fail2ban && sudo systemctl status fail2ban
+ufw allow 1724/tcp && ufw allow 2288/tcp && ufw allow 60000:61000/udp && ufw enable && ufw reload
+systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2ban
 ```
 4. Wi-Fi client
 ```
-sudo nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
+nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 ```
 ```
 country=RU
@@ -46,9 +46,9 @@ network={
 ```
 mkdir ~/mnt && mkdir ~/mnt/{hdd,cloud_mail,cloud_yandex,cloud_google}
 rclone config
-sudo systemctl start cloud_google&&sudo systemctl enable cloud_google&&sudo systemctl status cloud_google
-sudo systemctl start cloud_yandex&&sudo systemctl enable cloud_yandex&&sudo systemctl status cloud_yandex
-sudo systemctl start cloud_mail&&sudo systemctl enable cloud_mail&&sudo systemctl status cloud_mail
+systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cloud_google
+systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
+systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_mail
 ```
 6. torrent
 ```
