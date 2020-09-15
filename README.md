@@ -5,7 +5,7 @@ I. Simple server configuration
 ```
 apt update
 apt full-upgrade
-apt install vim tmux mc mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon dkms
+apt install vim tmux mc gparted mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon dkms
 curl https://rclone.org/install.sh | sudo bash
 systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
 touch ~/.hushlogin
