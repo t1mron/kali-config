@@ -11,8 +11,7 @@ touch ~/.hushlogin
 ```
 2. Configuration files
 ```
-mkdir ~/scripts && git clone https://github.com/t1mron/kali-config.git ~/git/kali-config/ && source ~/git/kali-config/files/scripts/main.sh && update_config && localedef -i en_US -f UTF-8 en_US.UTF-8
-git clone https://github.com/RPi-Distro/raspi-config.git ~/git/raspi-config/ && cp ~/git/raspi-config/raspi-config /usr/local/bin/ && chmod 755 /usr/local/bin/raspi-config
+mkdir ~/scripts && git clone https://github.com/t1mron/raspi-config.git ~/git/raspi-config/ && source ~/git/raspi-config/files/scripts/main.sh && update_config 
 ```
 3. Firewall
 ```
@@ -21,7 +20,7 @@ systemctl start fail2ban && systemctl enable fail2ban && systemctl status fail2b
 ```
 4. Wi-Fi client
 ```
-nano /etc/wpa_supplicant/wpa_supplicant-wlan1.conf
+nano /etc/wpa_supplicant/wpa_supplicant-wlan0.conf
 ```
 ```
 country=RU
@@ -41,27 +40,6 @@ network={
     priority=10
     id_str="ap"
 }
-```
-```
-cat > /etc/network/interfaces <<EOF
-auto lo
-iface lo inet loopback
-
-auto eth0
-iface eth0 inet dhcp
-
-auto wlan0
-allow-hotplug wlan0
-iface wlan0 inet dhcp
-
-auto wlan1
-allow-hotplug wlan1
-iface wlan1 inet dhcp
-    wpa-conf /etc/wpa_supplicant/wpa_supplicant-wlan1.conf
-EOF
-```
-```
-systemctl start wpa_supplicant &&  systemctl enable wpa_supplicant && systemctl status wpa_supplicant
 ```
 5. rclone (cloud storage)
 ```
@@ -108,14 +86,6 @@ Press prefix + I (capital i, as in Install) to fetch the plugins
 vim: :PlugInstall
 ```
 III Kali tools
-1. WiFi-driver RTL8812BU
-```
-git clone https://github.com/fastoe/RTL8812BU.git ~/git/RTL8812BU && dkms add ~/git/RTL8812BU/rtl88x2BU_WiFi_linux_v5.3.1_27678.20180430_COEX20200205-5960 && dkms install -m rtl88x2bu -v 5.3.1 && modprobe 88x2bu && reboot
-```
-USB 3.0 support
-```
-modprobe 88x2bu rtw_switch_usb_mode=1
-```
 Static WLAN name:
 ```
 ip a
@@ -125,12 +95,6 @@ nano /etc/udev/rules.d/72-001.rules
 SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="b8:27:eb:98:a0:cd", NAME="wlan1"
 ```
 Profit! Enjoy :)
-
-
-
-
-
-
 
 install img in sd card
 ```
