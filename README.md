@@ -7,7 +7,7 @@ sudo apt update
 sudo apt full-upgrade
 sudo apt install vim tmux mc gparted mosh ufw xrdp rclone software-properties-common fail2ban cryptsetup transmission-cli transmission-daemon dkms
 curl https://rclone.org/install.sh | sudo bash
-systemctl enable xrdp && systemctl restart xrdp && systemctl status xrdp
+sudo systemctl enable xrdp &&sudo systemctl restart xrdp &&sudo systemctl status xrdp
 touch ~/.hushlogin
 ```
 2. Configuration files
@@ -46,9 +46,9 @@ network={
 ```
 mkdir ~/media/{hdd,cloud_mail,cloud_yandex,cloud_google}
 rclone config
-systemctl start cloud_google&&systemctl enable cloud_google&&systemctl status cloud_google
-systemctl start cloud_yandex&&systemctl enable cloud_yandex&&systemctl status cloud_yandex
-systemctl start cloud_mail&&systemctl enable cloud_mail&&systemctl status cloud_mail
+sudo systemctl start cloud_google&&sudo systemctl enable cloud_google&&sudo systemctl status cloud_google
+sudo systemctl start cloud_yandex&&sudo systemctl enable cloud_yandex&&sudo systemctl status cloud_yandex
+sudo systemctl start cloud_mail&&sudo systemctl enable cloud_mail&&sudo systemctl status cloud_mail
 ```
 6. torrent
 ```
@@ -58,8 +58,8 @@ net.core.wmem_max = 4194304
 EOF
 ```
 ```
-sysctl -p
-systemctl enable transmission-daemon.service && service transmission-daemon start && service transmission-daemon status
+sudo sysctl -p
+sudo systemctl enable transmission-daemon.service &&sudo service transmission-daemon start &&sudo service transmission-daemon status
 tsm -w ~/mnt/hdd/downloads/
 ```
 ```
