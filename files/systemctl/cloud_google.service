@@ -5,7 +5,7 @@ Wants=network-online.target
                                                                                                         
 [Service]                                                                                              
 Type=notify                                                                                             
-ExecStart=/usr/bin/rclone mount --config /home/pi/.config/rclone/rclone.conf --drive-shared-with-me google: /home/pi/media/cloud_google 
+ExecStart=/usr/bin/rclone mount --allow-other --config /home/pi/.config/rclone/rclone.conf --drive-shared-with-me google: /home/pi/media/cloud_google 
 Restart=on-abort                                                                                        
                                                                                                         
 [Install]                                                                                               
