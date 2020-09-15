@@ -6,7 +6,7 @@ function update_config()
 	{
 	cd ~/git/raspi-config/files/ && git pull;
 	sudo cp ~/git/raspi-config/files/scripts/main.sh ~/scripts/;
-	sudo cp ~/git/raspi-config/files/scripts/{.bashrc,.profile} ~/;
+	sudo cp ~/git/raspi-config/files/scripts/.bashrc ~/;
 	sudo cp {.tmux.conf.local,.vimrc} ~/;
 	sudo cp ~/git/raspi-config/files/host/{hostname,hosts} /etc/;
 	sudo cp ~/git/raspi-config/files/host/sshd_config /etc/ssh/;
