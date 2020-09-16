@@ -94,7 +94,7 @@ fi
 function update_config()
 	{
 	cd ~/git/raspi-config/files/ && git pull;
-	sudo cp {.bashrc,.tmux.conf.local,.vimrc} ~/;
+	sudo cp {.bashrc,.profile,.tmux.conf.local,.vimrc} ~/;
 	sudo cp ~/git/raspi-config/files/host/{hostname,hosts} /etc/;
 	sudo cp ~/git/raspi-config/files/host/sshd_config /etc/ssh/;
 	sudo cp ~/git/raspi-config/files/host/jail.local /etc/fail2ban/;
