@@ -12,7 +12,7 @@ touch ~/.hushlogin
 ```
 2. Configuration files
 ```
-mkdir ~/scripts && git clone https://github.com/t1mron/raspi-config.git ~/git/raspi-config/ && source ~/git/raspi-config/files/scripts/main.sh && update_config 
+git clone https://github.com/t1mron/raspi-config.git ~/git/raspi-config/ && source ~/git/raspi-config/files/.bashrc && update_config 
 ```
 3. Firewall
 ```
